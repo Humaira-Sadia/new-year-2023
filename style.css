@@ -1,0 +1,193 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+body{
+    
+    min-height: 100vh;
+    display: flex;
+
+}
+
+.main{
+    width: 100vw;
+    height: 100vh;
+    /* background: linear-gradient(-10deg, #000,#250b0e,#3F0D12,#250b0e,#000); */
+    background: radial-gradient(ellipse at center,#3F0D12 20%,#000 100%);
+}
+
+.stars{
+    
+    background-repeat: repeat;
+    background-size: contain;
+    background-position: left top;
+}
+
+.glowing_stars .star{
+    position: absolute;
+    border-radius: 100%;
+    background-color: #fff;
+    width: 4px;
+    height: 5px;
+    opacity: .3;
+    will-change: opacity;
+    box-shadow: 0 0 10px #fff;
+}
+.glowing_stars .moon{
+    position: absolute;
+    border-radius: 100%;
+    background-color: #fff;
+    width: 120px;
+    height: 120px;
+    opacity: 1.5;
+    top: 50px;
+    left: 117px;
+    display: block;
+    will-change: opacity;
+    box-shadow: 0 0 10px #fff,
+    0 0 50px rgb(202, 202, 202);
+}
+
+.glowing_stars .star:nth-child(1){
+    top: 42%;
+    left: 15%;
+    animation: glow-star 2s infinite ease-in-out alternate 1s;
+}
+.glowing_stars .star:nth-child(2){
+    top: 73%;
+    left: 26%;
+    animation: glow-star 2s infinite ease-in-out alternate 3s;
+}
+.glowing_stars .star:nth-child(3){
+    top: 5%;
+    left: 74%;
+    animation: glow-star 2s infinite ease-in-out alternate 5s;
+}
+.glowing_stars .star:nth-child(4){
+    top: 48%;
+    left: 80%;
+    animation: glow-star 2s infinite ease-in-out alternate 7s;
+}
+.glowing_stars .star:nth-child(5){
+    top: 49%;
+    left: 45%;
+    animation: glow-star 2s infinite ease-in-out alternate 9s;
+}
+.glowing_stars .star:nth-child(6){
+    top: 10%;
+    left: 20%;
+    animation: glow-star 2s infinite ease-in-out alternate 9s;
+}
+.glowing_stars .star:nth-child(7){
+    top: 23%;
+    left: 90%;
+    animation: glow-star 2s infinite ease-in-out alternate 9s;
+}
+.glowing_stars .star:nth-child(8){
+    top: 80%;
+    left: 76%;
+    animation: glow-star 2s infinite ease-in-out alternate 3s;
+}
+@keyframes glow-star {
+    from{
+        opacity: 0.3;
+    }
+    to{
+        opacity: 4.3;
+    }
+}
+.santaClaus{
+    display: flex;
+}
+.santaClaus .santa:nth-child(1){
+    /* background-color: blue; */
+    animation: floating 10s infinite ease-in-out ;
+    transition: all .5s infinite ease-in-out;
+    margin-top: 145%;
+    margin-left: -230px;
+    animation-delay: 5s;
+}
+@keyframes floating {
+    from{
+     transform: translate(0px, 0px);
+    }
+    to{
+     transform: translate(850px,-100px);
+    }
+ }
+.santaClaus .santa:nth-child(2){
+    /* margin-left: 30px; */
+    animation: floatings 12s infinite ease-in-out ;
+    transition: all 6s infinite ease-in-out;
+}
+@keyframes floatings {
+   from{
+    transform: translate(279px, 50px);
+   }
+   to{
+    transform: translate(-900px,-80px);
+   }
+}
+
+.text{
+    margin-top: -21.8rem;
+    text-align: center;
+    color: transparent;
+    font-size: 2.1rem;
+    font-family: 'Times New Roman',serif;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
+    background-image: linear-gradient(
+        to right,
+        #552624 0,
+        #cb9b51 22%,
+        #f6e27a 45%,
+        #f6f2c0 50%,
+        #f6e27a 55%,
+        #cb9b51 78%,
+        #552624 100%
+    );
+    -webkit-background-clip: text;
+    animation: glow 1s infinite ease-in-out alternate 2s;
+}
+.text span{
+    color: transparent;
+    font-size: 3.5rem;
+    font-family: 'Times New Roman',serif;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
+    background-image: linear-gradient(
+        to right,
+        #f6f2c0 0,
+        #cb9b51 22%,
+        #f6e27a 45%,
+        #f6f2c0 50%,
+        #f6e27a 55%,
+        #cb9b51 78%,
+        #f6f2c0 100%
+    );
+    -webkit-background-clip: text;
+    
+}
+@keyframes glow{
+    from{
+        opacity: .7;
+    }
+    to{
+        opacity: 6.3;
+    }
+}
+
+.footer{
+    text-align: center;
+    color: #cb9b51;
+    margin-top: 40%;
+    position: static;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: .2rem;
+    font-size: .9rem;
+}
